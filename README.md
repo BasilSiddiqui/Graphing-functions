@@ -18,45 +18,6 @@ pip install numpy matplotlib
 ## Usage
 Import the function and call `plot_function()` with your desired parameters:
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-def plot_function(func, x_range=(-10, 10), num_points=100, title="Function Plot", color="b"):
-    """
-    Plots any given mathematical function.
-
-    Parameters:
-    - func: A Python function (e.g., lambda x: x**2)
-    - x_range: Tuple specifying the range of x values (default: -10 to 10)
-    - num_points: Number of points to generate (default: 100)
-    - title: Custom title for the plot
-    - color: Color of the plot line (default: 'b' for blue)
-    """
-    x = np.linspace(x_range[0], x_range[1], num_points)
-    y = func(x)
-
-    plt.figure(figsize=(8, 5))
-    plt.plot(x, y, label=title, color=color, linewidth=2)
-
-    # Add axis lines
-    plt.axhline(0, color="black", linewidth=1, linestyle="--", alpha=0.7)
-    plt.axvline(0, color="black", linewidth=1, linestyle="--", alpha=0.7)
-
-    # Add labels and title
-    plt.xlabel("x-axis")
-    plt.ylabel("y-axis")
-    plt.title(title)
-
-    # Improve grid style
-    plt.grid(True, linestyle="--", linewidth=0.5, alpha=0.7)
-
-    # Add a legend
-    plt.legend()
-
-    plt.show()
-```
-
 ## Examples
 
 ### Plot a Linear Function:
